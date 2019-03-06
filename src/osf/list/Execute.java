@@ -29,7 +29,7 @@ public class Execute {
 		fc.doPost(req, res);
 		System.out.println(res);
 		
-		req = new HashMap<>();
+		req = new HashMap<>(); //초기화시켜주지않아도 상관없다.
 		res = new HashMap<>();
 
 		req.put("cmd", "foodlist");
