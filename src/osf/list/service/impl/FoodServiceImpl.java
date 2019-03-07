@@ -1,28 +1,41 @@
 package osf.list.service.impl;
 
 import java.util.List;
-import java.util.Map;
 
 import osf.list.dao.FoodDAO;
 import osf.list.dao.impl.FoodDAOImpl;
 import osf.list.service.FoodService;
+import osf.list.vo.FoodVO;
 
 public class FoodServiceImpl implements FoodService {
 	private FoodDAO fdao = new FoodDAOImpl();
 
 	@Override
-	public List<Map<String, String>> selectFoodList() {
+	public List<FoodVO> selectFoodList() {
 		return fdao.selectFoodList();
+	}
+	
+	@Override
+	public FoodVO selectFood(FoodVO food) {
+		return fdao.selectFood(food);
 	}
 
 	@Override
-	public boolean insertFood(Map<String, String> food) {
+	public boolean insertFood(FoodVO food) {
 		return fdao.insertFood(food);
 	}
 
+
 	@Override
-	public Map<String, String> selectFood(Map<String, String> food) {
-		return fdao.selectFood(food);
+	public boolean updateFood(FoodVO food) {
+		return fdao.updataFood(food);
 	}
+
+	@Override
+	public boolean deleteFood(FoodVO food) {
+		
+		return fdao.deleteFood(food);
+	}
+
 
 }

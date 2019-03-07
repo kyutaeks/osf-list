@@ -1,32 +1,41 @@
 package osf.list.data;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+
+import osf.list.vo.FoodVO;
 
 public class FoodData {
-	public static final List<Map<String, String>> FOOD_LIST = new ArrayList<>();
+	public static final List<FoodVO> FOOD_LIST = new ArrayList<>();
 	static {
-		Map<String, String> map = new HashMap<>();
-		map.put("번호", "1");
-		map.put("이름", "만두");
-		map.put("가격", "10,000");
-		FOOD_LIST.add(map);
-		map = new HashMap<>();
-		map.put("번호", "2");
-		map.put("이름", "냉면");
-		map.put("가격", "20,000");
-		FOOD_LIST.add(map);
-		map = new HashMap<>();
-		map.put("번호", "3");
-		map.put("이름", "잔치국수");
-		map.put("가격", "30,000");
-		FOOD_LIST.add(map);
-		map = new HashMap<>();
-		map.put("번호", "4");
-		map.put("이름", "냉모밀");
-		map.put("가격", "40,000");
-		FOOD_LIST.add(map);
+		FoodVO food = new FoodVO();
+		food.setNumber(1);
+		food.setName("만두");
+		food.setPrice(1010);
+		FOOD_LIST.add(food);
+		
+		food = new FoodVO();
+		
+		food.setNumber(2);
+		food.setName("김밥");
+		food.setPrice(2020);
+		FOOD_LIST.add(food);
+		
+		food = new FoodVO();
+		
+		food.setNumber(3);
+		food.setName("라면");
+		food.setPrice(3030);
+		FOOD_LIST.add(food);
+		
+		food = new FoodVO();
+		
+		food.setNumber(4);
+		food.setName("주먹밥");
+		food.setPrice(4040);
+		FOOD_LIST.add(food);
+		
+		
+		
 	}
 }

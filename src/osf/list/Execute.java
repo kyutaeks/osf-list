@@ -3,7 +3,7 @@ package osf.list;
 import java.util.HashMap;
 import java.util.Map;
 
-import osf.list.contoller.FoodController;
+import osf.list.controller.FoodController;
 
 //osf.list
 // - contoller
@@ -24,14 +24,27 @@ public class Execute {
 		
 		req.put("cmd", "insert");
 		req.put("number", "5");
-		req.put("name", "연어");
-		req.put("price", "25,000");
+		req.put("name", "감자탕");
+		req.put("price", "25000");
 		fc.doPost(req, res);
 		System.out.println(res);
 		
 		req = new HashMap<>(); //초기화시켜주지않아도 상관없다.
 		res = new HashMap<>();
-
+		
+//		req.put("cmd", "update");
+//		req.put("number", "4");
+//		req.put("name", "감자탕");
+//		fc.doPost(req, res);
+		
+		req = new HashMap<>();
+		res =new HashMap<>();
+		
+//		req.put("cmd", "delete");
+//		req.put("number", "4");
+//		fc.doPost(req, res);
+//		System.out.println(res);
+		
 		req.put("cmd", "foodlist");
 		fc.doGet(req, res);
 		System.out.println(res);
